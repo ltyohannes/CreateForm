@@ -1,0 +1,152 @@
+/******************************
+       Table of Content
+  1. Body and Some General Stuff
+  2. Class Override
+  3. Input, Button, and Label
+  4. Layout Manager
+******************************/
+
+
+/***********************************
+  1. Body and Some General Stuff
+***********************************/
+
+html {
+    background: url(assets/bg-silhouette.svg) no-repeat fixed bottom;
+}
+
+.contentWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 0 0 5px grey, 0 0 5px grey;
+    padding: 15px 8px;
+    background-color: white;
+}
+
+.content {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer {
+    height: 70px;
+}
+
+
+/***********************************
+  2. Class Override
+***********************************/
+
+.center {
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 50%;
+    height: 50%;
+}
+
+h2 {
+    font-size: 20px !important;
+    color: rgb(80, 80, 80);
+    text-align: center;
+}
+
+.flex-container {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+}
+
+p {
+    margin: 0 !important;
+    font-size: 14px !important;
+}
+
+
+/***********************************
+  3. Input, Button, and Label
+***********************************/
+
+input,
+.btn,
+select {
+    padding: 8px 3px;
+    border: 1px solid rgb(126, 124, 124);
+    border-radius: 2px;
+    box-sizing: border-box;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 10px;
+    text-decoration: none;
+    /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+input[type=email] {
+    width: 430px;
+}
+
+input[type=text],
+input[type=year] {
+    margin: 0 auto;
+    width: 200px;
+}
+
+input[type=number] {
+    width: 70px;
+}
+
+button {
+    padding: 10px 5px;
+    border: 1px solid rgb(126, 124, 124);
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 10px;
+    text-decoration: none;
+    width: 100%;
+    opacity: 1 !important;
+    background-color: #2773c9;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b8eff;
+}
+
+
+/***********************************
+  3. 4. Layout Manager
+***********************************/
+
+@media screen and (max-width: 800px) {
+    .contentWrapper,
+    .content,
+    .footer,
+    .flex-container {
+        width: 100%;
+        margin-top: 0;
+    }
+    /* show the hidden text on small screens */
+    .hide-md-lg {
+        display: block;
+        text-align: center;
+    }
+}
