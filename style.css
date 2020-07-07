@@ -34,7 +34,7 @@ html {
 }
 
 .footer {
-    height: 70px;
+    height: 50px;
 }
 
 
@@ -155,7 +155,11 @@ button:hover {
 
 /* Same as last but with the device orientation on land scape */
 
-@media (max-width: 700px) and (orientation: landscape) {}
+@media (max-width: 700px) and (orientation: landscape) {
+.center{
+       margin-top: 10px;
+       }
+}
 
 
 /* Including width and orientation you can add a media type clause,
