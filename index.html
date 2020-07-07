@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="scripts.js"></script>
@@ -57,15 +58,23 @@
                             <option value="12">December</option>
                         </select>
                     </div>
-                    <div><input type="number" name="dd" id="dd" placeholder="DD"></div>
-                    <div><input type="year" name="year" id="year" placeholder="YYYY"></div>
+                    <div><input type="number" name="dd" id="dd" placeholder="DD" min="1" max="31"></div>
+                    <div><input type="number" name="year" id="year" placeholder="YYYY" min="1900" max="2020"></div>
                 </div>
                 <span class="error"><p id="month_error"><p id="dd_error"><p id="year_error"></p></p></p></span>
                 <br>
-                <button class="register_button" type="submit" value="submit">Next  <img src="assets/arrow-next.svg "></button>
+                <button class="button" type="next" style="vertical-align:middle"><span>Next </span></button>
+
             </div>
         </form>
-        <div class="footer"></div>
+        <div class="footer">
+            <br>
+            <div class="flex-container">
+                <a class="bottom"><i class="fa fa-question-circle"> Forgot Password</i></a>
+                <a class="bottom"><i class="fa fa-user-circle-o"> Log In</i></a>
+            </div>
+        </div>
+    </div>
     </div>
 
 </body>
