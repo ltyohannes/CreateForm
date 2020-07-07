@@ -111,7 +111,7 @@ input[name=year] {
     width: 200px;
 }
 
-input[name=number] {
+input[name=dd] {
     width: 70px;
 }
 
@@ -194,7 +194,7 @@ button[type=next] {
     input[type=email] {
         width: 300px;
     }
-    input[name=number] {
+    input[name=dd] {
         width: 50px;
     }
     .footer {
