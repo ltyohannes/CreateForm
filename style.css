@@ -153,11 +153,6 @@ button:hover {
     }
 }
 
-* For lower than 700px resolutions */
-
-@media (max-width: 700px) {}
-
-
 /* Same as last but with the device orientation on land scape */
 
 @media (max-width: 700px) and (orientation: landscape) {}
