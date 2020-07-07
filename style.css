@@ -140,7 +140,7 @@ button:hover {
 
 @media screen and (max-width: 600px) {
     input[type=text] {
-        width: 140px;
+        width: 130px;
     }
     input[type=year] {
         width: 100px;
