@@ -3,6 +3,9 @@
   1. Body and Some General Stuff
   2. Class Override
   3. Input, Button, and Label
+     3.1 'Input'
+     3.2 'Next' Button
+     3.3 'bottom' Button
   4. Layout Manager
 ******************************/
 
@@ -34,7 +37,9 @@ html {
 }
 
 .footer {
-    height: 50px;
+    height: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 
@@ -44,12 +49,12 @@ html {
 
 .center {
     display: block;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: auto;
 }
 
 h2 {
@@ -75,10 +80,10 @@ p {
 
 /***********************************
   3. Input, Button, and Label
+      3.1 'Input'
 ***********************************/
 
 input,
-.btn,
 select {
     padding: 8px 3px;
     border: 1px solid rgb(126, 124, 124);
@@ -92,8 +97,7 @@ select {
     /* remove underline from anchors */
 }
 
-input:hover,
-.btn:hover {
+input:hover {
     opacity: 1;
 }
 
@@ -102,23 +106,28 @@ input[type=email] {
 }
 
 input[type=text],
-input[type=year] {
+input[name=year] {
     margin: 0 auto;
     width: 200px;
 }
 
-input[type=number] {
+input[name=number] {
     width: 70px;
 }
 
-button {
+
+/*****************************
+      3.2 'Next' Button
+*****************************/
+
+button[type=next] {
     padding: 10px 5px;
     border: 1px solid rgb(126, 124, 124);
     border-radius: 2px;
     box-sizing: border-box;
     display: inline-block;
     font-size: 17px;
-    line-height: 10px;
+    line-height: 14px;
     text-decoration: none;
     width: 100%;
     opacity: 1 !important;
@@ -127,8 +136,46 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #2b8eff;
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/*****************************
+      3.3 'bottom' Button
+*****************************/
+
+.bottom {
+    color: #2773c9 !important;
+    font-family: "Times New Roman";
+    background: #ffffff;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.bottom:hover {
+    cursor: pointer;
 }
 
 
@@ -136,53 +183,39 @@ button:hover {
   3. 4. Layout Manager
 ***********************************/
 
-/* For lower than 700px resolutions */
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+    /* For lower than 700px resolutions */
     input[type=text] {
-        width: 130px;
+        width: 135px;
     }
-    input[type=year] {
+    input[name=year] {
         width: 100px;
     }
     input[type=email] {
         width: 300px;
     }
-    input[type=number] {
+    input[name=number] {
         width: 50px;
+    }
+    .footer {
+        height: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
 
-/* Same as last but with the device orientation on land scape */
-
 @media (max-width: 700px) and (orientation: landscape) {
-.center{
-       margin-top: 10px;
-       }
+    /* Same as last but with the device orientation on land scape */
 }
 
-
-/* Including width and orientation you can add a media type clause,
+@media tv and (min-width: 700px) and (orientation: landscape) {
+    /* Including width and orientation you can add a media type clause,
    in this case 'tv' */
-
-@media tv and (min-width: 700px) and (orientation: landscape) {}
-
-
-/* for low resolution display with background-image */
-
-.image {
-    background-image: url(/path/to/my/image.png);
-    background-size: 200px 300px;
-    height: 300px;
-    width: 200px;
 }
-
-
-/* for high resolution (Retina) display with background-image */
 
 @media only screen and (min--moz-device-pixel-ratio: 2),
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
-    background-size: 200px 400px;
+    /* for high resolution (Retina) display with background-image */
 }
