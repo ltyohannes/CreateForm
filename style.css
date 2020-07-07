@@ -136,18 +136,20 @@ button:hover {
   3. 4. Layout Manager
 ***********************************/
 
-@media screen and (max-width: 800px) {
-    .contentWrapper,
-    .content,
-    .footer,
-    .flex-container {
-        width: 100%;
-        margin-top: 0;
+/* For lower than 700px resolutions */
+
+@media screen and (max-width: 600px) {
+    input[type=text] {
+        width: 150px;
     }
-    /* show the hidden text on small screens */
-    .hide-md-lg {
-        display: block;
-        text-align: center;
+    input[type=year] {
+        width: 100px;
+    }
+    input[type=email] {
+        width: 330px;
+    }
+    input[type=number] {
+        width: 50px;
     }
 }
 
