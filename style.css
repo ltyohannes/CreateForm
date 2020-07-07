@@ -150,3 +150,38 @@ button:hover {
         text-align: center;
     }
 }
+
+* For lower than 700px resolutions */
+
+@media (max-width: 700px) {}
+
+
+/* Same as last but with the device orientation on land scape */
+
+@media (max-width: 700px) and (orientation: landscape) {}
+
+
+/* Including width and orientation you can add a media type clause,
+   in this case 'tv' */
+
+@media tv and (min-width: 700px) and (orientation: landscape) {}
+
+
+/* for low resolution display with background-image */
+
+.image {
+    background-image: url(/path/to/my/image.png);
+    background-size: 200px 300px;
+    height: 300px;
+    width: 200px;
+}
+
+
+/* for high resolution (Retina) display with background-image */
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+    background-size: 200px 400px;
+}
