@@ -186,7 +186,7 @@ button[type=next] {
 @media screen and (max-width: 700px) {
     /* For lower than 700px resolutions */
     input[type=text] {
-        width: 135px;
+        width: 140px;
     }
     input[name=year] {
         width: 100px;
